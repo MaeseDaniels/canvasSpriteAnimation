@@ -11,6 +11,13 @@ function attachEvents(){
                 action = 'jump';
             }
         }
+        else if(e.keyCode === 17){
+            if(action === "idle-swrd"){
+                clearTimeout(contAttacksTimeOut);
+                contAnimation = 0;
+                action = 'basic-attack';
+            }
+        }
 
         if(e.key === 'c'){
             
@@ -26,6 +33,8 @@ function attachEvents(){
             }
 
         }
+
+
 
     }
 

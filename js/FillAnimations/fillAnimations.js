@@ -3,12 +3,18 @@ var idleSwrdAnimation = [];
 var jumpAnimation = [];
 var swrdDrwAnimation = [];
 var swrdShteAnimation = [];
+var basicAttackAnimation = {
+    0:[],
+    1:[],
+    2:[]
+};
 
 function fillAnimations(){
     fillIdleAnimation();
     fillJumpAnimation();
     fillSwrdDrwAnimation();
     fillSwrdShteAnimation();
+    fillBasicAttackAnimation();
 }
 
 
@@ -65,20 +71,12 @@ function fillJumpAnimation(){
 
     jumpAnimation[6] =  new Image();
     jumpAnimation[6].src = './animation/idle/adventurer-idle-02.png';
-    // jumpAnimation[7] =  new Image();
-    // jumpAnimation[7].src = './animation/idle/adventurer-idle-03.png';
  
     jumpAnimation[7] =  new Image();
     jumpAnimation[7].src = './animation/jump/adventurer-crouch-00.png';
 
     jumpAnimation[8] =  new Image();
     jumpAnimation[8].src = './animation/jump/adventurer-crouch-01.png';
-
-    // jumpAnimation[10] =  new Image();
-    // jumpAnimation[10].src = './animation/jump/adventurer-crouch-02.png';
-
-    // jumpAnimation[11] =  new Image();
-    // jumpAnimation[11].src = './animation/jump/adventurer-crouch-03.png';
    
 }
 
@@ -114,6 +112,61 @@ function fillSwrdShteAnimation(){
     swrdShteAnimation[3].src = './animation/swrd/adventurer-swrd-shte-03.png';
     
    
+}
+
+function fillBasicAttackAnimation(){
+    basicAttackAnimation[0][0] = new Image();
+    basicAttackAnimation[0][0].src = './animation/attack/adventurer-attack1-00.png';
+
+    basicAttackAnimation[0][1] = new Image();
+    basicAttackAnimation[0][1].src = './animation/attack/adventurer-attack1-01.png';
+
+    basicAttackAnimation[0][2] = new Image();
+    basicAttackAnimation[0][2].src = './animation/attack/adventurer-attack1-02.png';
+
+    basicAttackAnimation[0][3] = new Image();
+    basicAttackAnimation[0][3].src = './animation/attack/adventurer-attack1-03.png';
+
+    basicAttackAnimation[0][4] = new Image();
+    basicAttackAnimation[0][4].src = './animation/attack/adventurer-attack1-04.png';
+
+    
+    basicAttackAnimation[1][0] = new Image();
+    basicAttackAnimation[1][0].src = './animation/attack/adventurer-attack2-00.png';
+
+    basicAttackAnimation[1][1] = new Image();
+    basicAttackAnimation[1][1].src = './animation/attack/adventurer-attack2-01.png';
+
+    basicAttackAnimation[1][2] = new Image();
+    basicAttackAnimation[1][2].src = './animation/attack/adventurer-attack2-02.png';
+
+    basicAttackAnimation[1][3] = new Image();
+    basicAttackAnimation[1][3].src = './animation/attack/adventurer-attack2-03.png';
+
+    basicAttackAnimation[1][4] = new Image();
+    basicAttackAnimation[1][4].src = './animation/attack/adventurer-attack2-04.png';
+
+    basicAttackAnimation[1][5] = new Image();
+    basicAttackAnimation[1][5].src = './animation/attack/adventurer-attack2-05.png';
 
 
+    basicAttackAnimation[2][0] = new Image();
+    basicAttackAnimation[2][0].src = './animation/attack/adventurer-attack3-00.png';
+
+    basicAttackAnimation[2][1] = new Image();
+    basicAttackAnimation[2][1].src = './animation/attack/adventurer-attack3-01.png';
+
+    basicAttackAnimation[2][2] = new Image();
+    basicAttackAnimation[2][2].src = './animation/attack/adventurer-attack3-02.png';
+
+    basicAttackAnimation[2][3] = new Image();
+    basicAttackAnimation[2][3].src = './animation/attack/adventurer-attack3-03.png';
+
+    basicAttackAnimation[2][4] = new Image();
+    basicAttackAnimation[2][4].src = './animation/attack/adventurer-attack3-04.png';
+
+    basicAttackAnimation[2][5] = new Image();
+    basicAttackAnimation[2][5].src = './animation/attack/adventurer-attack3-05.png';
+
+    
 }
