@@ -4,15 +4,18 @@ var background;
 
 var action = 'jump';
 var contAnimation = 0;
+var contAttacks = 0;
+var contAttacksTimeOut = null;
 
-var interval = 125; //normal speed 125
+var interval = 100; //normal speed 125
 
 var actionAnimation= {
     'idle' : idleAnimation,
     'idle-swrd': idleSwrdAnimation,
     'jump' : jumpAnimation,
     'drw-swrd' : swrdDrwAnimation,
-    'shte-swrd' : swrdShteAnimation
+    'shte-swrd' : swrdShteAnimation,
+    'basic-attack' : basicAttackAnimation[contAttacks]
 
 }
 
@@ -45,9 +48,27 @@ function animation(){
         if(action === 'jump'){
             action = 'idle';
         } 
-        if(action === 'drw-swrd'){
+        else if(action === 'drw-swrd'){
             action = 'idle-swrd';
         }
+        else if(action === 'basic-attack'){
+            
+            action = 'idle-swrd';
+            if(contAttacks === 2){
+                contAttacks= 0;
+            }
+            else{
+                contAttacks++;
+            }
+            
+            actionAnimation['basic-attack'] = basicAttackAnimation[contAttacks];
+            contAttacksTimeOut = setTimeout(function(){
+                contAttacks = 0;
+                actionAnimation['basic-attack'] = basicAttackAnimation[contAttacks];
+            },1000);
+        }
+
+        
         contAnimation=0;
     }else{
         contAnimation++;
