@@ -18,6 +18,21 @@ function attachEvents(){
                 action = 'basic-attack';
             }
         }
+        else if (e.keyCode === 40){
+            if(action !== 'crouch' && action !== 'shte-swrd'){
+                contAnimation = 0;
+                if(action === "idle-swrd"){
+                    action = 'shte-swrd';
+
+                }
+                else{
+                    action = 'crouch';
+                }
+                
+                
+
+            }
+        }
 
         if(e.key === 'c'){
             
@@ -28,6 +43,10 @@ function attachEvents(){
                     contAnimation = 0;
                     action = 'drw-swrd';
                 }
+                else if(action === 'idle-swrd'){
+                    contAnimation = 0;
+                    action = 'shte-swrd';
+                }
 
 
             }
@@ -36,6 +55,20 @@ function attachEvents(){
 
 
 
+    }
+
+
+    window.onkeyup = function(e){
+
+        e = e || window.event;
+
+        if (e.keyCode === 40){
+            contAnimation = 0;
+            action = 'idle';
+
+            
+        }
+    
     }
 
 }
