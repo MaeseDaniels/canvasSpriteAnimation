@@ -3,6 +3,7 @@ var idleSwrdAnimation = [];
 var jumpAnimation = [];
 var swrdDrwAnimation = [];
 var swrdShteAnimation = [];
+var crouchAnimation = [];
 var basicAttackAnimation = {
     0:[],
     1:[],
@@ -15,6 +16,7 @@ function fillAnimations(){
     fillSwrdDrwAnimation();
     fillSwrdShteAnimation();
     fillBasicAttackAnimation();
+    fillCrouchAnimation();
 }
 
 
@@ -110,6 +112,22 @@ function fillSwrdShteAnimation(){
 
     swrdShteAnimation[3] =  new Image();
     swrdShteAnimation[3].src = './animation/swrd/adventurer-swrd-shte-03.png';
+    
+   
+}
+
+function fillCrouchAnimation(){
+    crouchAnimation[0] =  new Image();
+    crouchAnimation[0].src = './animation/crouch/adventurer-crouch-00.png';
+
+    crouchAnimation[1] =  new Image();
+    crouchAnimation[1].src = './animation/crouch/adventurer-crouch-01.png';
+
+    crouchAnimation[2] =  new Image();
+    crouchAnimation[2].src = './animation/crouch/adventurer-crouch-02.png';
+
+    crouchAnimation[3] =  new Image();
+    crouchAnimation[3].src = './animation/crouch/adventurer-crouch-03.png';
     
    
 }

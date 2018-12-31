@@ -15,6 +15,7 @@ var actionAnimation= {
     'jump' : jumpAnimation,
     'drw-swrd' : swrdDrwAnimation,
     'shte-swrd' : swrdShteAnimation,
+    'crouch' : crouchAnimation,
     'basic-attack' : basicAttackAnimation[contAttacks]
 
 }
@@ -33,19 +34,17 @@ window.onload = function(){
     // window.requestAnimationFrame(animation);
 
     setInterval(function(){animation();}, interval);
+    // animation();
 }
 
 function animation(){
 
     ctx.clearRect(0,0,800,600);
-
-
     ctx.drawImage(background, 0, 0, 800, 600);
     ctx.drawImage(actionAnimation[action][contAnimation],350,465, 100, 100);
-
-
+    
     if(contAnimation >= actionAnimation[action].length-1){
-        if(action === 'jump'){
+        if(action === 'jump' ||action === 'shte-swrd'){
             action = 'idle';
         } 
         else if(action === 'drw-swrd'){
